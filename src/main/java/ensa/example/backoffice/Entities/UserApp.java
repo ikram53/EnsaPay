@@ -18,7 +18,7 @@ public  class UserApp {
     private static final long PASSWORD_EXPIRATION_TIME
             = 30L * 24L * 60L * 60L * 1000L;
 
-    @Id @GeneratedValue
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_user;
     @Column(name = "nom")
     private String nom;
@@ -41,7 +41,8 @@ public  class UserApp {
     @Column(name = "username")
     private String username;
 
-
+    @Column(name="firstAuth")
+    private Boolean firstAuth;
 
     @Column(name = "cinRecto",columnDefinition = "LONGBLOB")
     private byte[] cinRecto;
