@@ -72,7 +72,7 @@ public class UserService {
         return password;
     }
 
-    public Boolean createAgent(String nom, String prenom, String username, String numTel, MultipartFile cinRecto, MultipartFile cinVerso, String profil) throws IOException {
+    public Boolean createUser(String nom, String prenom, String username, String numTel, MultipartFile cinRecto, MultipartFile cinVerso, String profil) throws IOException {
 
        UserApp user=new UserApp();
        user.setNom(nom);

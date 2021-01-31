@@ -51,7 +51,7 @@ public class UserController {
             try {
 
                 String pass=null;
-                Boolean bol=userService.createAgent(nom, prenom, username, numTel, cinRecto, cinVerso, profil);
+                Boolean bol=userService.createUser(nom, prenom, username, numTel, cinRecto, cinVerso, profil);
 
 
                 if(bol) {
@@ -84,7 +84,8 @@ public class UserController {
     }
 
     @RequestMapping("/isFirstAuth")
-    public Boolean isFirstAuth(@RequestBody UserApp user){
-        return  user.getFirstAuth();
+    public Boolean isFirstAuth(){
+        return currentAgent().getFirstAuth();
+        //return  user.getFirstAuth();
     }
 }
